@@ -1,0 +1,119 @@
+.panel {
+	position: relative;
+	overflow: hidden;
+	padding: 52px;
+	border-radius: var(--radius-lg);
+	background: var(--color-primary);
+	color: white;
+	box-shadow: var(--shadow-md);
+}
+
+.panel::after {
+	content: '';
+	position: absolute;
+	width: 260px;
+	height: 260px;
+	right: -80px;
+	top: -100px;
+	border-radius: 50%;
+	background: var(--color-accent);
+	opacity: 0.15;
+}
+
+.eyebrow {
+	margin: 0 0 10px;
+	color: var(--color-accent);
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.panel h2 {
+	position: relative;
+	z-index: 1;
+	max-width: 600px;
+	margin: 0;
+	font-size: 38px;
+	line-height: 1.1;
+}
+
+.lead {
+	position: relative;
+	z-index: 1;
+	max-width: 660px;
+	margin: 14px 0 0;
+	color: rgba(255, 255, 255, 0.74);
+}
+
+.contacts {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+	margin-top: 40px;
+}
+
+.contacts a,
+.contacts > div {
+	min-width: 0;
+	padding: 18px;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	border-radius: 14px;
+	background: rgba(255, 255, 255, 0.06);
+	text-decoration: none;
+}
+
+.contacts a:hover {
+	border-color: var(--color-accent);
+}
+
+.contacts span,
+.contacts strong {
+	display: block;
+}
+
+.contacts span {
+	margin-bottom: 6px;
+	color: rgba(255, 255, 255, 0.56);
+	font-size: 12px;
+}
+
+.contacts strong {
+	overflow-wrap: anywhere;
+	font-size: 15px;
+}
+
+.socials {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 12px;
+}
+
+.socials a {
+	padding: 10px 14px;
+	border-radius: 10px;
+	background: var(--color-accent);
+	color: #172033;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 800;
+}
+
+@media (max-width: 760px) {
+	.panel {
+		padding: 32px 24px;
+	}
+
+	.panel h2 {
+		font-size: 30px;
+	}
+
+	.contacts {
+		grid-template-columns: 1fr;
+	}
+}
